@@ -1,7 +1,7 @@
-## Repo para criação de formularios
+# Repo para criação de formularios
 
 
-# Tecnologias
+## Tecnologias
 
 <ul>
     <li>HTML</li>
