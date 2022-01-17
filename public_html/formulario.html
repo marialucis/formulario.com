@@ -1,31 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
+    <!--Metadados-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Linkando o css a pag html(CSS)-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+
+    <!--Titulo da pagina(aparece na aba)-->
     <title>Formulario</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css"> <!--linkando o css a pag html-->
+    
 </head>
+
 <body>
+    <!--Cabecalho com titulo e subtitulo)-->
     <div>
-        <h1>Cadastro de DEVs</h1>
-        <p>Complete suas informações</p>
+        <h1 id="titulo">Cadastro de DEVs</h1>
+        <p id="subtitulo">Complete suas informações</p>
         <br>
     </div>
 
+    <!--Inicio do formulario-->    
     <form>
-        <fieldset>
-            <div>
-                <label>Nome</label>
-                <input type="text" name = "nome" id = "nome">
+        <!--Agrupador de campos-->
+        <fieldset class="grupo">
+            <!--Campo do nome com legenda "nome" e css de classe "campo"-->
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name = "nome" id = "nome" required>
             </div>
+            <!--Campo do sobrenome com legenda "sobrenome" e css de classe "campo"-->
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenone" id="sobrenome" required> 
+            </div>
+        </fieldset>
+    
+        <!--Campo de E-mail com-->
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
 
-            <div>
-                <label>Sobrenome</label>
-                <input type="text" name="sobrenone" id="sobrenome"> 
-            </div>
-        </fieldset>  <!--tag para agrupar campos-->
+        <!--Campo de desenvolvimento web com 3 opçoes de botoes selecionaveis (radio button) e css de classe "campo"-->
+        <div class="campo">
+            <label><strong>Qual lado da aplicação você desenvolve?</strong></label>
+            <label>
+                <input type="radio" name="devweb" value="frotend" checked>Front-End
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="backend">Back-end 
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="fullstack">Fullstack 
+            </label>
+
+        </div>
+
+        <!--Campo de Senioridade com 3 opções para escolha (select option) e css de classe "campo"-->
+        <div class="campo">
+            <label for="senioridade"><strong>Senioridade</strong></label>
+            <select id="senioridade" required>
+                <option selected disabled value="Selecione"></option>
+                <option>Junior</option>
+                <option>Pleno</option>
+                <option>Sênior</option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+        <!--Campo de tecnologias para escolha de 1 ou mais opções para marcar(checkbox) e css de classe "campo"-->   
+        <div id="check">
+            <label><strong>Selecione as tecnologias que utiliza: </strong></label><br><br>
+            <input type ="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+            <label for="tecnologia1">HTML</label>
+            <input type ="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+            <label for="tecnologia2">CSS</label>
+            <input type ="checkbox" id="tecnologia3" name="tecnologia3" value="JAVASCRIPT">
+            <label for="tecnologia3">JAVASCRIPT</label>
+            <input type ="checkbox" id="tecnologia4" name="tecnologia4" value="PHP">
+            <label for="tecnologia4">PHP</label>
+            <input type ="checkbox" id="tecnologia5" name="tecnologia5" value="C#">
+            <label for="tecnologia5">C#</label>
+            <input type ="checkbox" id="tecnologia6" name="tecnologia6" value="Python">
+            <label for="tecnologia6">C#</label>
+            <input type ="checkbox" id="tecnologia7" name="tecnologia7" value="Java">
+            <label for="tecnologia7">java</label>
+        </div>
+        </fieldset>
+
+        <!--Caixa de texto-->
+        <div class="campo">
+            <br>
+            <label for="experiencia" ><strong>Conte um pouco mais da sua experiência:</strong></label>
+            <textarea rows="6" style="width: 11cm" id="experiencia" name="experiencia"></textarea>
+        </div>
+        
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit" onsubmit="">Concluído</button>  
+
     </form>
 
 </body>
