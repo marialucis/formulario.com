@@ -1,10 +1,12 @@
-# Repo para criação de formularios
+# Repo para criação de formularios 
 
 
-## Tecnologias
+## Tecnologias Utilizadas
 
 <ul>
-    <li>HTML</li>
-    <li>CSS</li>
+    <li>HTML- Esqueleto/estrutura do site</li>
+    <li>CSS - Estilizando o site</li>
+    <li>PHP - Informações dos dados digitados pelo usuario</li>
     
 </ul>
+
